@@ -14,12 +14,12 @@ class ExtendDateRangeTest {
 
     @Test
     void dateCheckerIfOver31S() {
-        assertEquals("Valid", extendDateRange.isValidDate(31, 12, 2022));
+        assertTrue(extendDateRange.validDate(2022, 12, 31));
     }
 
     @Test
     void dateCheckerIfOver31F(){
-        assertEquals("Valid", extendDateRange.isValidDate(35, 12, 2022) );
+        assertFalse(extendDateRange.validDate(2022, 12, 31));
     }
 
 
