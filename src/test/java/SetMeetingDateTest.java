@@ -3,13 +3,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ExtendDateRangeTest {
+class SetMeetingDateTest {
 
-    ExtendDateRange extendDateRange;
+    SetMeetingDate extendDateRange;
 
     @BeforeEach
     void setUp() {
-       extendDateRange = new ExtendDateRange();
+       extendDateRange = new SetMeetingDate();
     }
 
     @Test
