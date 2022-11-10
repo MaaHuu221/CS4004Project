@@ -1,9 +1,14 @@
 import java.util.regex.Pattern;
+import java.util.Arrays;
 
 public class LocationPicker {
 
-    public String chooseLocation(String location){
-        return "Room chosen!";
+    int[] availableRooms = {1, 2, 3 ,4, 5};
+
+    public String chooseLocation(int locationPicker, boolean availability){
+        //if (availableRooms.includes(locationPicker) )
+
+        return "";
     }
 
 }

@@ -5,21 +5,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SetMeetingDateTest {
 
-    SetMeetingDate extendDateRange;
+    SetMeetingDate setMeetingDate;
 
     @BeforeEach
     void setUp() {
-       extendDateRange = new SetMeetingDate();
+       setMeetingDate = new SetMeetingDate();
     }
 
     @Test
     void isDateValidTrue() {
-        assertTrue(extendDateRange.validDate(2022, 12, 31));
+        assertTrue(setMeetingDate.validDate(2022, 12, 31));
     }
 
     @Test
     void isDateValidFail(){
-        assertFalse(extendDateRange.validDate(2022, 12, 31));
+        assertFalse(setMeetingDate.validDate(2022, 12, 31));
     }
 
 
