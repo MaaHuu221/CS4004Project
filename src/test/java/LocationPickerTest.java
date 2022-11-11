@@ -3,7 +3,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LocationPickerTest {
+class
+LocationPickerTest {
 
     LocationPicker locationPicker;
     @BeforeEach
