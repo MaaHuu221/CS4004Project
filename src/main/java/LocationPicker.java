@@ -3,12 +3,16 @@ import java.util.Arrays;
 
 public class LocationPicker {
 
-    int[] availableRooms = {1, 2, 3 ,4, 5};
 
     public String chooseLocation(int locationPicker, boolean availability){
-        //if (availableRooms.includes(locationPicker) )
-
-        return "";
+        if ((locationPicker <= 99) && (availability = true)) {
+            return "Room " + " " + " has been booked";
+        } else if ((locationPicker > 99)) {
+            return "Room does notexist";
+        } else if (availability = false){
+            return "Room un available";
+        }
+        else return "Room doesnot exist";
     }
 
 }

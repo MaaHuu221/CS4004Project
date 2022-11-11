@@ -14,7 +14,7 @@ class SetMeetingDateTest {
 
     @Test
     void isDateValidTrue() {
-        assertTrue(setMeetingDate.validDate(2022, 12, 31));
+        assertTrue(setMeetingDate.validDate(20229, 12, 31));
     }
 
     @Test
