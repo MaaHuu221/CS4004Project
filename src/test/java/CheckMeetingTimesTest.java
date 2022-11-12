@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,14 +19,14 @@ class CheckMeetingTimesTest {
 
     @Test
     void overlappingTime() {
-        ArrayList<Double> times = new ArrayList<>(Arrays.asList(12.30, 2.00, 3.30, 5.00));
-        assertFalse(overlapping.CheckMeetingTimes(times, 5.00));
+        ArrayList<String> times = new ArrayList<>(Arrays.asList("12:30", "2:00", "3:30", "5:00"));
+        assertFalse(overlapping.CheckMeetingTimes(times, "5:00"));
     }
 
     @Test
     void noOverlappingTime(){
-        ArrayList<Double> times = new ArrayList<>(Arrays.asList(12.30, 2.00, 3.30, 5.00));
-        assertTrue(overlapping.CheckMeetingTimes(times, 11.00));
+        ArrayList<String> times = new ArrayList<>(Arrays.asList("12:30", "2:00", "3:30", "5:00"));
+        assertTrue(overlapping.CheckMeetingTimes(times, "11:00"));
     }
 
 
