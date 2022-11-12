@@ -13,13 +13,19 @@ class SetMeetingDateTest {
     }
 
     @Test
-    void isDateValidTrue() {
-        assertTrue(setMeetingDate.validDate(20229, 12, 31));
+    void testForARealDay() {
+        assertTrue(setMeetingDate.validDate(2022, 12, 31));
     }
 
     @Test
-    void isDateValidFail(){
-        assertFalse(setMeetingDate.validDate(2022, 12, 31));
+    void testToSeeIfDatePast2021(){
+        assertFalse(setMeetingDate.validDate(2021, 12, 31));
+    }
+
+
+    @Test
+    void testForANonExistentDate(){
+        assertFalse(setMeetingDate.validDate(2022, 2, 31));
     }
 
 

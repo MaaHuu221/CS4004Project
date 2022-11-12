@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class
@@ -12,13 +14,15 @@ LocationPickerTest {
         locationPicker = new LocationPicker();
     }
 
+
+
     @Test
     void correctPlaceAndAvailablity() {
        assertEquals("Room " + 1 + " has been booked", locationPicker.chooseLocation(1, true));
     }
 
     @Test
-    void unexistingRoom(){
+    void nonexistentRoom(){
         assertEquals("Room does not exist", locationPicker.chooseLocation(100, true));
     }
 
@@ -28,7 +32,7 @@ LocationPickerTest {
     }
 
     @Test
-    void unexistingAndUnavailableRoom() {
+    void nonexistentAndUnavailableRoom() {
         assertEquals("Room does not exist", locationPicker.chooseLocation(100, false));
     }
 }
