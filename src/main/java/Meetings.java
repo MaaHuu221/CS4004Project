@@ -2,14 +2,20 @@ import java.util.ArrayList;
 
 public class Meetings {
 
-    public String[] getMeetings() {
+    public ArrayList<String> getMeetings() {
+        meetingList.add("Meeting 1");
+        meetingList.add("Meeting 2");
+        meetingList.add("Meeting 3");
+        meetingList.add("Meeting 4");
+        meetingList.add("Meeting 5");
         return meetingList;
     }
 
-    public void setMeetings(String[] meetings) {
-        meetingList = meetings;
+    public void setMeetings(ArrayList<String> meetings) {
+        this.meetingList = meetings;
     }
 
-    private String[] meetingList = {"Meeting 1", "Meeting 2", "Meeting 3", "Meeting 4"};
+    ArrayList<String> meetingList = new ArrayList<String>();
+
 }
 
