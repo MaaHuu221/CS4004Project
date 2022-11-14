@@ -21,6 +21,7 @@ class MeetingTimeAndChoiceTest {
     @ParameterizedTest
     @CsvSource({"11:00 to 12:00,yes,true",
             "15:30 to 16:00,x,false,",
+            "15:30 to 16:00,x,true",
             "11:00 to 12:00,no,false",
             "0,x,false"})
     void overlappingTime(String time, String choice, boolean expected) {

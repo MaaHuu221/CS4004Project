@@ -19,7 +19,6 @@ public class MeetingTimeAndChoice {
                     return false;
                 }
             }
-
         }
         return false;
     }
