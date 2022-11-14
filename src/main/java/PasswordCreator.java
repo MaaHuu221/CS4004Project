@@ -7,7 +7,7 @@ public class PasswordCreator {
             "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{10,25}$"
     );
 
-    public static boolean isValidPassword(CharSequence password) {
+    public static boolean createValidPassword(CharSequence password) {
         return password != null && PASSWORD_PATTERN.matcher(password).matches();
     }
 }

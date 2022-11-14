@@ -22,36 +22,36 @@ class PasswordCreatorTest {
 
     @Test
     void passwordWithLessThan10Characters() {
-        assertFalse(PasswordCreator.isValidPassword("T3stP@ssw"));
+        assertFalse(PasswordCreator.createValidPassword("T3stP@ssw"));
     }
 
     @Test
     void passwordWithMoreThan25Characters(){
-        assertFalse(PasswordCreator.isValidPassword("T3stP@sswordOver25Characters"));
+        assertFalse(PasswordCreator.createValidPassword("T3stP@sswordOver25Characters"));
     }
 
     @Test
     void passwordWithNoCaptitals(){
-        assertFalse(PasswordCreator.isValidPassword("t3stp@sswordlower"));
+        assertFalse(PasswordCreator.createValidPassword("t3stp@sswordlower"));
     }
 
     @Test
     void passwordALLCAPS(){
-        assertFalse(PasswordCreator.isValidPassword("T3STP@SSWORDUPPER"));
+        assertFalse(PasswordCreator.createValidPassword("T3STP@SSWORDUPPER"));
     }
 
     @Test
     void passwordWithNoSpecial(){
-        assertFalse(PasswordCreator.isValidPassword("T3stPassword"));
+        assertFalse(PasswordCreator.createValidPassword("T3stPassword"));
     }
 
     @Test
     void passwordWithNoNumbers(){
-        assertFalse(PasswordCreator.isValidPassword("TestP@ssword"));
+        assertFalse(PasswordCreator.createValidPassword("TestP@ssword"));
     }
 
     @Test
     void workingPassword(){
-        assertTrue(PasswordCreator.isValidPassword("T3stP@ssword"));
+        assertTrue(PasswordCreator.createValidPassword("T3stP@ssword"));
     }
 }
