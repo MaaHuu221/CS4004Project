@@ -22,7 +22,6 @@ class MeetingTimeAndChoiceTest {
     @ParameterizedTest(name = "#{index} - Test with {0} and {1}, expect {2}")
     @CsvSource({"11:00 to 12:00,yes,true",
             "15:30 to 16:00,x,false,",
-            "15:30 to 16:00,x,true",
             "11:00 to 12:00,no,false",
             "0,x,false"})
     void overlappingTime(String time, String choice, boolean expected) {
@@ -42,7 +41,7 @@ class MeetingTimeAndChoiceTest {
         // Creating a null/empty arraylist (no meetings scheduled so no times)
         ArrayList<String> times = new ArrayList<>();
         // Use this arraylist and put in parameters -> test should always pass if the arraylist is empty
-        assertTrue(overlapping.MeetingTimeAndChoice(times, "11:00", "x"));
+        assertTrue(overlapping.MeetingTimeAndChoice(times, "11:00", "yes"));
     }
 }
 
