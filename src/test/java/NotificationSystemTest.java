@@ -15,6 +15,7 @@ class NotificationSystemTest {
     void setUp() { notificationSystem = new NotificationSystem();
     }
 
+    //Tests for different timed notifications
     @Test
     void notificationMorning() { assertEquals("Good morning! Time for your meetup with Friends!", notificationSystem.notificationType(9));
     }
