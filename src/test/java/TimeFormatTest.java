@@ -2,41 +2,41 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 class TimeFormatTest {
 
     @BeforeEach
     void setUp() {
     }
 
-
     @Test
     @DisplayName("Testing Correct format | true")
-    void testingForCorrectFormatHoursAndMinutes(){
+    void testingForCorrectFormat(){
         Assertions.assertTrue(TimeFormat.IsTimeValid("12:30"));
     }
 
     @Test
     @DisplayName("Testing for nonexistent minute | false")
-    void testingForInvalidMinute(){
+    void testingForNonexistentMinute(){
         Assertions.assertFalse(TimeFormat.IsTimeValid("12:65"));
     }
 
     @Test
     @DisplayName("Testing for nonexistent hour | false")
-    void testingForInvalidHour(){
+    void testingForNonexistentHour(){
         Assertions.assertFalse(TimeFormat.IsTimeValid("26:30"));
     }
 
     @Test
     @DisplayName("Testing for too many hour numbers | false")
-    void testingForIncorrectHourFormat(){Assertions.assertFalse(TimeFormat.IsTimeValid("123:30"));}
+    void testingForLargeHourFormat(){Assertions.assertFalse(TimeFormat.IsTimeValid("123:30"));}
 
     @Test
     @DisplayName("Testing for too many minute numbers | false")
-    void testingForIncorrectMinuteFormat(){Assertions.assertFalse(TimeFormat.IsTimeValid("12:300"));}
+    void testingForLargeMinuteFormat(){Assertions.assertFalse(TimeFormat.IsTimeValid("12:300"));}
 
     @Test
     @DisplayName("Testing for not enough hour numbers | false")
@@ -69,11 +69,12 @@ class TimeFormatTest {
     }
 
     @Test
-    @DisplayName("Testing for 24:00 as midnight | false")
-    void testing24Clock(){Assertions.assertFalse(TimeFormat.IsTimeValid("24:00"));}
+    @DisplayName("Testing for 24:00 as midnight | false") // range goes from 00 to 23 NOT 24
+    void testingIncorrect24Clock(){Assertions.assertFalse(TimeFormat.IsTimeValid("24:00"));}
 
     @Test
     @DisplayName("Testing for 00:00 as midnight | true")
-    void testing24Clock2(){Assertions.assertTrue(TimeFormat.IsTimeValid("00:00"));}
+    void testingCorrectClock2(){Assertions.assertTrue(TimeFormat.IsTimeValid("00:00"));}
 
 }
+

@@ -11,7 +11,7 @@ public class TimeFormat {
 
     /**
      * Checks if Time input matches format pattern
-     * @param time
+     * @param time input
      * @return true or false
      */
     public static boolean IsTimeValid(CharSequence time) {

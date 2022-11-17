@@ -31,8 +31,6 @@ class MeetingTimeAndChoiceTest {
         boolean result = overlapping.MeetingTimeAndChoice(times, time, choice);
         // Compare this result with the expected result given -> test should pass if the result and expected result are equal
         assertEquals(expected, result);
-
-
     }
 
     @Test
