@@ -4,15 +4,19 @@ import java.util.Arrays;
 
 public class CancelMeetings {
 
-    Meetings meetings;
 
-    public CancelMeetings(Meetings meetings){
-        this.meetings = meetings;
+    public CancelMeetings(){
+        addMeetings();
+    }
+
+    private final ArrayList<String> meetingList = new ArrayList<String>();
+
+    public void addMeetings(){
+        meetingList.add("Meeting 1");
+        meetingList.addAll(Arrays.asList("Meeting 2", "Meeting 3", "Meeting 4", "Meeting 5", "Meeting 6"));
     }
 
     public String removeMeeting(String meetingChoice){
-        ArrayList<String> meetingList = meetings.meetingList;
-        meetings.getMeetings();
         if (meetingList.contains(meetingChoice)) {
             meetingList.remove(meetingChoice);
             return "Meeting has been removed";

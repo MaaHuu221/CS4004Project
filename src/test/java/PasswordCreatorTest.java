@@ -31,7 +31,7 @@ class PasswordCreatorTest {
     }
 
     @Test
-    void passwordWithNoCaptitals(){
+    void passwordWithNoCapitals(){
         assertFalse(PasswordCreator.createValidPassword("t3stp@sswordlower"));
     }
 
