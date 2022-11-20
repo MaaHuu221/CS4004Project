@@ -76,5 +76,7 @@ class TimeFormatTest {
     @DisplayName("Testing for 00:00 as midnight | true")
     void testingCorrectClock2(){Assertions.assertTrue(TimeFormat.IsTimeValid("00:00"));}
 
+    @Test
+    void testingnull(){Assertions.assertFalse(TimeFormat.IsTimeValid(""));}
 }
 
