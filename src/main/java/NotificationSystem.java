@@ -4,7 +4,9 @@
 
 public class NotificationSystem {
     public String notificationType(double time){
-        //Time running on a 24-hour clock
+        /*
+        Time running on a 24-hour clock
+         */
         if(time >= 8 && time <= 12){
             return "Good morning! Time for your meetup with Friends!";
         }
